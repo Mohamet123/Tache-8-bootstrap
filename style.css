@@ -1,0 +1,395 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.log{
+    text-decoration: none;
+    color: #da6111;
+}
+/* -------------home-----------*/
+.banner_wrapper{
+    width: 100%;
+    height: auto;
+    min-height: 650px;
+    background-image: url(./bg-img.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 0 100px 0
+}
+.txt-1{
+    color: #da6111;
+    font-size: 19px;
+    font-weight: bold;
+}
+.txt-2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.bout{
+    color: #fff;
+    background-color: #da6111;
+    width: 30%;
+    border: none;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+/* -------------Fin home-----------*/
+
+/* -------------section services-----------*/
+._k img{
+    width: 150px;
+}
+/* -------------Fin section services-----------*/
+
+/* -------------section portfolio-----------*/
+#portfolio{
+
+    background-color: rgb(232, 241, 241);
+}
+._hover{
+    position: relative;
+    width: 100%;
+    
+}
+._hover img{
+    height: 250px;
+}
+.card-img-top{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #e49f0b;
+}
+._hover:hover .overlay{
+    opacity: 0.9;
+}
+.text{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+._flex{
+    display: flex;
+    gap: 100px;
+}
+/* -------------Fin section portfolio-----------*/
+
+/* -------------section About-----------*/
+
+/* The actual timeline (la ligne verticale) */
+.main-timeline {
+    position: relative;
+  }
+  
+  /* The actual timeline (la ligne verticale) */
+  .main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: auto;
+    background-color: #e2e2e2;
+    top: 1.30%;
+    bottom: 0;
+    left: 50%;
+  }
+  
+  /* Container autour du contenu */
+  .timeline {
+    position: relative;
+    width: 33%;
+  }
+  
+  /* mise en forme élément sur le timeline */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .timeline:nth-child(1)::after{
+    background-image: url(./photo_4.jpg);
+    right: -51%;
+    border: 7px solid #e2e2e2;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
+.timeline:nth-child(2)::after{
+  background-image: url(./photo_3.jpg);
+  left: -42%;
+  border: 7px solid #e2e2e2;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+.timeline:nth-child(3)::after{
+  background-image: url(./photo_1.jpg);
+  right: -51%;
+  border: 7px solid #e2e2e2;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+.timeline:nth-child(4)::after{
+  background-image: url(./photo_2.jpg);
+  left: -42%;
+  border: 7px solid #e2e2e2;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+  /* Place the container to the left */
+  .left {
+    padding: 0px 0px 20px 40px;
+    left: 7%;
+    text-align: right;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    padding: 0px 0px 20px 40px;
+    left: 57%;
+  }
+
+  .timeline-image{
+    position: relative;
+    background-color: orange;
+    color: white;
+    top: 15px;
+    left: 43.50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 19px;
+    z-index: 1;
+    border: 7px solid #e2e2e2;
+    text-align: center;
+    align-items: center;
+    padding-top: 2vw;
+  }
+  
+/* -------------Fin section About-----------*/
+/*------------responsive ------------*/
+@media screen and (max-width: 576px) {
+
+    .navbar{
+      padding: 19px 3%;
+    }
+  
+                    /* portfolio */
+  
+      /* Place the timelime to the left */
+      .main-timeline::after {
+        left: 31px;
+      }
+  
+      .card a .card-img-top{
+        display:block;
+        height: 263px;
+        width: 100%;
+      }
+      .card a:hover::after {
+        content:'';
+        position:absolute;
+        left:0; 
+        top:0;
+        height: 263px;
+        width: 100%;
+        display: block;
+        background-color: rgba(255, 166, 0, 0.879);
+        transition: 1s;
+      }
+    
+      /* Full-width containers */
+      .timeline {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0px;
+      }
+  
+      .left {
+        left: 0%;
+        text-align: left;
+      }
+    
+      /* faire en sorte que tous les containers de classe right se comportent comme se de gauche */
+      .right {
+        left: 0%;
+      }
+  
+      .timeline:nth-child(1)::after{
+       
+        left: -1%;
+        width: 70px;
+        height: 70px;
+    }
+    .timeline:nth-child(2)::after{
+       
+        left: -1%;
+        width: 70px;
+        height: 70px;
+    }
+    .timeline:nth-child(3)::after{
+       
+        left: -1%;
+        width: 70px;
+        height: 70px;
+    }
+    .timeline:nth-child(4)::after{
+       
+        left: -1%;
+        width: 70px;
+        height: 70px;
+    }
+    .timeline-image{
+      position: relative;
+      background-color: orange;
+      color: white;
+      top: 15px;
+      left: -1%;
+      width: 70px;
+      height: 70px;
+      z-index: 1;
+    }
+    .timeline-image h4{
+      padding-top: 2px;
+      font-size: 11px;
+    }
+    /*------team-----image----*/
+    
+    ._y{
+        height: 215px;
+        width: 200px;
+        border-radius: 40%;
+       margin-left: 85px;
+       border: 3px solid #e2e2e2;
+    }
+    ._o{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    ._l{
+      margin-top: 50px;
+    }
+    .footer{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+} 
+
+/*-------------team-----------------*/
+#team{
+       background-color: rgb(239, 251, 252); 
+}
+._y img{
+    height: 200px;
+    width: 100%;
+    border-radius: 40%;
+}
+._y{
+    display: flex;
+    justify-content: center;
+    border: 7px solid #e2e2e2;
+    border-radius: 40%;
+}
+._row1{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+i{
+    background-color: black;
+    color: #fff;
+    
+  padding: 15px;
+  border-radius: 50%;
+  margin: 7px;
+    
+}
+.card-icon .fa-brands:hover{
+    background-color: rgba(2, 56, 105, 0.685);
+    transition: 0.50s;
+    cursor: pointer;
+  }
+
+/*-------------fin team-----------------*/
+
+/*------------- reseau-----------------*/
+._i img{
+    width: 190px;
+    height: 50px;
+  }
+._o{
+    display: flex;
+    justify-content: center;
+}
+/*-------------fin reseau-----------------*/
+
+/*------------- Contact-----------------*/
+#contact{
+  width: 100%;
+  height: auto;
+  min-height: 550px;
+  background-image: url(./img1.avif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0 100px 0
+}
+._p{
+  color: #fff;
+}
+.button a{
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(167, 116, 8);
+}
+
+/*-------------fin contact-----------------*/
+
+/*----- footer -----*/
+footer .footer{
+  justify-content: space-around;
+  margin: 33px 0;
+}
+footer .footer .fa-brands{
+  margin: 0 12px;
+  background-color: black;
+  color: white;
+  padding: 11px;
+  border-radius: 50%;
+}
+footer .footer .fa-brands:hover{
+  background-color: rgba(0, 0, 0, 0.685);
+  transition: 0.50s;
+  cursor: pointer;
+}
